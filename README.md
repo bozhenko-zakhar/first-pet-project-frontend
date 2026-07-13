@@ -1,1 +1,0 @@
-# first-pet-project-frontend
