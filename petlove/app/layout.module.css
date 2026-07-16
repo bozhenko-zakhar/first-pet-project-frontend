@@ -13,9 +13,8 @@
 	}
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
 	.container {
-		min-width: 1440px;
-		padding-inline: 64px;
+		min-width: 1280px;
 	}
 }
