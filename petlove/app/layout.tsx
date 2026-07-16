@@ -1,4 +1,5 @@
 import "./globals.css";
+import css from "./layout.module.css"
 
 export default function RootLayout({
   children,
@@ -7,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={css.container}>{children}</body>
     </html>
   );
 }

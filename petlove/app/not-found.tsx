@@ -12,8 +12,8 @@ const NotFound = () => {
 					className={css.image}
 					src="/not-found-cat.png"
 					alt="Circled cat which simulate zero number"
-					width={280}
-					height={280}
+					width={109}
+					height={109}
 					loading="eager"
 				/>
 				<p>4</p>

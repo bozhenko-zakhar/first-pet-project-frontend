@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-family);
+	margin: 0px;
+	overflow: auto !important;
+}
+
+img,
+picture,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+ul,
+ol,
+button,
+fieldset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+button {
+	cursor: pointer;
+}
