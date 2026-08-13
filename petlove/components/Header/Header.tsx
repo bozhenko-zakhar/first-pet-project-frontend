@@ -11,18 +11,21 @@ import BurgerButton from "../BurgerButton/BurgerButton";
 
 const Header = () => {
 	const [isOpened, setOpened] = useState(false);
-	
+
 	return (
 		<header className={css.header}>
 			<div className={css.navigation}>
 				<Link className={css.favicon_link} href="/" aria-label="Home">
-					<svg className={css.favicon_logo}>
+					<svg className={css.favicon_logo_mobile}>
 						<use href="/logo-mobile.svg"></use>
+					</svg>
+					<svg className={css.favicon_logo_desktop_tablet}>
+						<use href="/logo-desktop-tablet.svg"></use>
 					</svg>
 				</Link>
 			</div>
-			
-			{ !isOpened && <BurgerButton setOpen={() => setOpened(!isOpened)} />}
+
+			{!isOpened && <BurgerButton setOpen={() => setOpened(!isOpened)} />}
 			<BurgerMenu isOpened={isOpened} setOpen={() => setOpened(!isOpened)} />
 		</header>
 	);

@@ -37,6 +37,40 @@
 	height: min-content;
 }
 
+.menu_list {
+	position: relative;
+	top: 236px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px
+}
+
+.menu_item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: 1px solid rgba(38, 38, 38, 0.15);
+	border-radius: 30px;
+	width: 119px;
+	height: 48px;
+}
+
+.menu_item:first-child {
+	border: 1px solid #f6b83d;
+}
+
+.menu_link {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.28571;
+	letter-spacing: -0.03em;
+	color: #262626;
+}
+
 @media (min-width: 768px) {
 	.menu_overlay {
 		right: -374;

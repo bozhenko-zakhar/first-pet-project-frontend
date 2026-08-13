@@ -3,16 +3,18 @@ import "./globals.css";
 import css from "./layout.module.css"
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-			<body className={css.container}>
-				<Header />
-				{children}
+	return (
+		<html lang="en">
+			<body>
+				<div className={css.container}>
+					<Header />
+					{children}
+				</div>
 			</body>
-    </html>
-  );
+		</html>
+	);
 }

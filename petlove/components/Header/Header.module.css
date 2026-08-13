@@ -4,22 +4,42 @@
 	align-items: center;
 
 	padding-block: 28px 20px;
-	height: 32px;
-
-	margin-bottom: 32px;
+	height: 80px;
 }
 
 .header_navigation {}
 
-.favicon_link {}
+.favicon_link {
+	display: flex;
+}
 
-.favicon_logo {
+.favicon_logo_mobile {
 	width: 76px;
 	height: 20px;
 }
 
+.favicon_logo_desktop_tablet {
+	display: none;
+	width: 105;
+	height: 28px;
+}
+
 @media (min-width: 768px) {
+	.favicon_logo_mobile {
+		display: none;
+	}
+
+	.favicon_logo_desktop_tablet {
+		display: block;
+	}
+
 	.header {
-		height: 36px;
+		height: 114px;
+		padding-block: 32px;
+	}
+
+	.favicon_logo {
+		width: 105px;
+		height: 28px;
 	}
 }

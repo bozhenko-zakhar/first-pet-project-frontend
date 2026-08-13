@@ -43,6 +43,11 @@
 }
 
 @media (min-width: 768px) {
+	.burger_btn {
+		width: 36px;
+		height: 36px;
+	}
+
 	.burger_btn span {
 		width: 27px;
 	}
