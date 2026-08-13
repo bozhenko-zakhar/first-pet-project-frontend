@@ -18,6 +18,7 @@
 }
 
 .image_container > p {
+	font-family: var(--manrope-font);
 	font-weight: 800;
 	font-size: 120px;
 	line-height: 1;
@@ -31,6 +32,7 @@
 }
 
 .image_container + p {
+	font-family: var(--manrope-font);
 	font-weight: 700;
 	line-height: 1.25;
 	letter-spacing: -0.03em;
@@ -48,6 +50,7 @@
 	border-radius: 30px;
 	background: #fff4df;
 
+	font-family: var(--manrope-font);
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.28571;
@@ -83,7 +86,7 @@
 	.link {
 		width: 162px;
 		height: 48px;
-		
+
 		font-size: 16px;
 		line-height: 1.25;
 	}

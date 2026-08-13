@@ -19,11 +19,19 @@ const BurgerMenu = ({ isOpened, setOpen }: Props) => {
 					<BurgerButton isMenu setOpen={setOpen} />
 				</div>
 
-				<ul className={css.menu_list}>
-					<li className={css.menu_item}><Link className={css.menu_link} href="/news">News</Link></li>
-					<li className={css.menu_item}><Link className={css.menu_link} href="/notices">Find pet</Link></li>
-					<li className={css.menu_item}><Link className={css.menu_link} href="/friends">Our friends</Link></li>
-				</ul>
+				<nav className={css.menu_nav}>
+					<ul className={css.menu_list}>
+						<li className={css.menu_item}><Link className={css.menu_link} href="/news">News</Link></li>
+						<li className={css.menu_item}><Link className={css.menu_link} href="/notices">Find pet</Link></li>
+						<li className={css.menu_item}><Link className={css.menu_link} href="/friends">Our friends</Link></li>
+					</ul>
+
+					<div className={css.menu_authentication}>
+						<Link className={css.menu_login} href="/login">Log in</Link>
+						<Link className={css.menu_registr} href="/registr">Registration</Link>
+					</div>
+				</nav>
+
 			</div>
 		</div>
 	);
