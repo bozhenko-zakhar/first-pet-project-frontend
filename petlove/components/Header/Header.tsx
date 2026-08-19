@@ -14,7 +14,7 @@ const Header = () => {
 
 	return (
 		<header className={css.header}>
-			<div className={css.navigation}>
+			<nav className={css.header_navigation}>
 				<Link className={css.favicon_link} href="/" aria-label="Home">
 					<svg className={css.favicon_logo_mobile}>
 						<use href="/logo-mobile.svg"></use>
@@ -23,9 +23,24 @@ const Header = () => {
 						<use href="/logo-desktop-tablet.svg"></use>
 					</svg>
 				</Link>
-			</div>
 
-			{!isOpened && <BurgerButton setOpen={() => setOpened(!isOpened)} />}
+				<div>
+					<ul className={css.header_list}>
+						<li className={css.header_item}><Link className={css.header_link} href="/news">News</Link></li>
+						<li className={css.header_item}><Link className={css.header_link} href="/notices">Find pet</Link></li>
+						<li className={css.header_item}><Link className={css.header_link} href="/friends">Our friends</Link></li>
+					</ul>
+
+					<div className={css.header_authentication}>
+						<Link className={css.header_login} href="/login">Log in</Link>
+						<Link className={css.header_registr} href="/register">Registration</Link>
+					</div>
+				</div>
+			</nav>
+
+			<div className={clsx(css.burder_btn_container, isOpened && css.hidden)}>
+				<BurgerButton setOpen={() => setOpened(!isOpened)} />
+			</div>
 			<BurgerMenu isOpened={isOpened} setOpen={() => setOpened(!isOpened)} />
 		</header>
 	);

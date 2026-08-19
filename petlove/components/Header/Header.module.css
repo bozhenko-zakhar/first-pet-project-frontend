@@ -2,15 +2,26 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 16px;
 
 	padding-block: 28px 20px;
 	height: 80px;
 }
 
-.header_navigation {}
+.header_navigation {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header_navigation>div {
+	display: flex;
+	gap: 142px;
+}
 
 .favicon_link {
 	display: flex;
+	flex-shrink: 0;
 }
 
 .favicon_logo_mobile {
@@ -22,6 +33,75 @@
 	display: none;
 	width: 105;
 	height: 28px;
+}
+
+.header_list {
+	display: none;
+	gap: 10px;
+}
+
+.header_link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: 1px solid rgba(38, 38, 38, 0.15);
+	border-radius: 30px;
+	width: 119px;
+	height: 48px;
+
+	font-family: var(--manrope-font);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.28571;
+	letter-spacing: -0.03em;
+	text-decoration: none;
+	color: #262626;
+}
+
+.header_authentication {
+	display: none;
+	gap: 8px;
+}
+
+.header_login,
+.header_registr {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 30px;
+	width: 100%;
+	height: 42px;
+
+	background: #fff4df;
+	color: #f6b83d;
+
+	font-family: var(--manrope-font);
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.28571;
+	letter-spacing: -0.03em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.header_login {
+	background: #f6b83d;
+	color: #fff;
+}
+
+.burder_btn_container {
+	width: 32px;
+	height: 32px;
+	flex-shrink: 0;
+	opacity: 1;
+
+	transition: opacity 0.3s ease;
+}
+
+.burder_btn_container.hidden {
+	opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -41,5 +121,32 @@
 	.favicon_logo {
 		width: 105px;
 		height: 28px;
+	}
+
+	.header_authentication {
+		display: flex;
+	}
+
+	.header_login {
+		width: 119px;
+	}
+
+	.header_registr {
+		width: 149px;
+	}
+
+	.burder_btn_container {
+		width: 36px;
+		height: 36px;
+	}
+}
+
+@media (min-width: 1280px) {
+	.header_list {
+		display: flex;
+	}
+
+	.burder_btn_container {
+		display: none;
 	}
 }

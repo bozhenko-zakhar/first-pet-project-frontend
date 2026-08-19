@@ -28,7 +28,7 @@ const BurgerMenu = ({ isOpened, setOpen }: Props) => {
 
 					<div className={css.menu_authentication}>
 						<Link className={css.menu_login} href="/login">Log in</Link>
-						<Link className={css.menu_registr} href="/registr">Registration</Link>
+						<Link className={css.menu_registr} href="/register">Registration</Link>
 					</div>
 				</nav>
 
