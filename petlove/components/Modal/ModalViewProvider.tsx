@@ -3,6 +3,8 @@
 import { useState, useEffect, ReactNode, createContext } from "react"
 import { createPortal } from "react-dom"
 
+import ModalApproveAction from "@/components/ModalApproveAction/ModalApproveAction";
+
 import css from "./ModalViewProvider.module.css"
 
 interface ModalContextValue {
@@ -51,11 +53,12 @@ const ModalViewProvider = ({ children }: Props) => {
 						<div className={css.modal_container}>
 							<div onClick={() => setIsOpen(false)} className={css.icon_container}>
 								<svg className={css.icon}>
-									<use href="/cross-small.svg"></use>
+									<use href="/close-modal.svg"></use>
 								</svg>
 							</div>
 							{
-								null
+								modalForm === "logout" ? <ModalApproveAction /> :
+									null
 							}
 						</div>
 					</div>,
