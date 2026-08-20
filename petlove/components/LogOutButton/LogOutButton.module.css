@@ -1,46 +1,26 @@
-.authentication {
+.button {
 	display: none;
-	gap: 8px;
-}
-
-.login,
-.registr {
-	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: 10px;
 
 	border-radius: 30px;
-	width: 100%;
-	height: 42px;
+	width: 136px;
+	height: 50px;
 
-	background: #fff4df;
-	color: #f6b83d;
+	background: #f6b83d;
 
 	font-family: var(--manrope-font);
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.25;
 	letter-spacing: -0.03em;
-	text-decoration: none;
 	text-transform: uppercase;
-}
-
-.login {
-	background: #f6b83d;
 	color: #fff;
 }
 
-
 @media (min-width: 768px) {
-	.authentication {
+	.button {
 		display: flex;
-	}
-
-	.login {
-		width: 119px;
-	}
-
-	.registr {
-		width: 149px;
 	}
 }

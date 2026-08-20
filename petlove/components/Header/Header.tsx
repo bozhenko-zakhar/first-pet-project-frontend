@@ -7,6 +7,7 @@ import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
 import BurgerButton from "@/components/BurgerButton/BurgerButton";
 import Nav from "@/components/Nav/Nav";
 import AuthNav from "@/components/AuthNav/AuthNav";
+import UserNav from "@/components/UserNav/UserNav";
 
 import clsx from "clsx";
 import css from "./Header.module.css"
@@ -27,14 +28,19 @@ const Header = () => {
 				</Link>
 
 				<div>
-					<Nav />
+					<ul className={css.list}>
+						<Nav />
+					</ul>
+
 					<AuthNav />
+					{/* <UserNav /> */}
 				</div>
 			</nav>
 
 			<div className={clsx(css.burder_btn_container, isOpened && css.hidden)}>
 				<BurgerButton setOpen={() => setOpened(!isOpened)} />
 			</div>
+
 			<BurgerMenu isOpened={isOpened} setOpen={() => setOpened(!isOpened)} />
 		</header>
 	);

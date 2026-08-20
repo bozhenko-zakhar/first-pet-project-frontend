@@ -1,9 +1,12 @@
 "use client"
 
-import css from "./BurgerMenu.module.css"
-import BurgerButton from "../BurgerButton/BurgerButton";
-import clsx from "clsx";
 import Link from "next/link";
+
+import BurgerButton from "../BurgerButton/BurgerButton";
+import Nav from "../Nav/Nav";
+
+import clsx from "clsx";
+import css from "./BurgerMenu.module.css"
 
 type Props = {
 	isOpened: boolean;
@@ -21,9 +24,7 @@ const BurgerMenu = ({ isOpened, setOpen }: Props) => {
 
 				<nav className={css.menu_nav}>
 					<ul className={css.menu_list}>
-						<li className={css.menu_item}><Link className={css.menu_link} href="/news">News</Link></li>
-						<li className={css.menu_item}><Link className={css.menu_link} href="/notices">Find pet</Link></li>
-						<li className={css.menu_item}><Link className={css.menu_link} href="/friends">Our friends</Link></li>
+						<Nav />
 					</ul>
 
 					<div className={css.menu_authentication}>

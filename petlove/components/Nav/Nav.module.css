@@ -1,8 +1,3 @@
-.list {
-	display: none;
-	gap: 10px;
-}
-
 .link {
 	display: flex;
 	align-items: center;
@@ -20,10 +15,4 @@
 	letter-spacing: -0.03em;
 	text-decoration: none;
 	color: #262626;
-}
-
-@media (min-width: 1280px) {
-	.list {
-		display: flex;
-	}
 }
