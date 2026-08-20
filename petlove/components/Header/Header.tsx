@@ -3,11 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
+import BurgerButton from "@/components/BurgerButton/BurgerButton";
+import Nav from "@/components/Nav/Nav";
+import AuthNav from "@/components/AuthNav/AuthNav";
 
 import clsx from "clsx";
 import css from "./Header.module.css"
-import BurgerButton from "../BurgerButton/BurgerButton";
 
 const Header = () => {
 	const [isOpened, setOpened] = useState(false);
@@ -25,16 +27,8 @@ const Header = () => {
 				</Link>
 
 				<div>
-					<ul className={css.header_list}>
-						<li className={css.header_item}><Link className={css.header_link} href="/news">News</Link></li>
-						<li className={css.header_item}><Link className={css.header_link} href="/notices">Find pet</Link></li>
-						<li className={css.header_item}><Link className={css.header_link} href="/friends">Our friends</Link></li>
-					</ul>
-
-					<div className={css.header_authentication}>
-						<Link className={css.header_login} href="/login">Log in</Link>
-						<Link className={css.header_registr} href="/register">Registration</Link>
-					</div>
+					<Nav />
+					<AuthNav />
 				</div>
 			</nav>
 

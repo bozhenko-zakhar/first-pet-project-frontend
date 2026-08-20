@@ -1,0 +1,41 @@
+.login,
+.registr {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 30px;
+	width: 100%;
+	height: 42px;
+
+	background: #fff4df;
+	color: #f6b83d;
+
+	font-family: var(--manrope-font);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: -0.03em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.login {
+	background: #f6b83d;
+	color: #fff;
+}
+
+
+@media (min-width: 768px) {
+	.authentication {
+		display: flex;
+	}
+
+	.login {
+		width: 119px;
+	}
+
+	.registr {
+		width: 149px;
+	}
+}
