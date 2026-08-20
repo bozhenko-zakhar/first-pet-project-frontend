@@ -4,6 +4,7 @@ import Header from "@/components/Header/Header";
 
 import "./globals.css";
 import css from "./layout.module.css"
+import ModalViewProvider from "@/components/Modal/ModalViewProvider";
 
 const manrope = Manrope({
 	subsets: ["latin", "cyrillic"],
@@ -21,8 +22,10 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${manrope.variable}`}>
 				<div className={css.container}>
-					<Header />
-					{children}
+					<ModalViewProvider>
+						<Header />
+						{children}
+					</ModalViewProvider>
 				</div>
 			</body>
 		</html>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
+
 import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
 import BurgerButton from "@/components/BurgerButton/BurgerButton";
 import Nav from "@/components/Nav/Nav";
@@ -13,7 +14,7 @@ import clsx from "clsx";
 import css from "./Header.module.css"
 
 const Header = () => {
-	const [isOpened, setOpened] = useState(false);
+	const [isBurgerOpened, setOpened] = useState(false);
 
 	return (
 		<header className={css.header}>
@@ -32,16 +33,16 @@ const Header = () => {
 						<Nav />
 					</ul>
 
-					<AuthNav />
-					{/* <UserNav /> */}
+					{/* <AuthNav /> */}
+					<UserNav />
 				</div>
 			</nav>
 
-			<div className={clsx(css.burder_btn_container, isOpened && css.hidden)}>
-				<BurgerButton setOpen={() => setOpened(!isOpened)} />
+			<div className={clsx(css.burder_btn_container, isBurgerOpened && css.hidden)}>
+				<BurgerButton setOpen={() => setOpened(!isBurgerOpened)} />
 			</div>
 
-			<BurgerMenu isOpened={isOpened} setOpen={() => setOpened(!isOpened)} />
+			<BurgerMenu isOpened={isBurgerOpened} setOpen={() => setOpened(!isBurgerOpened)} />
 		</header>
 	);
 };
