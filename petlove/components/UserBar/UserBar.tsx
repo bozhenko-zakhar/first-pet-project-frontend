@@ -13,7 +13,7 @@ const UserBar = () => {
 				</svg>
 			</div>
 
-			<p></p>
+			<p className={css.text}>Anna</p>
 		</div>
 	);
 };

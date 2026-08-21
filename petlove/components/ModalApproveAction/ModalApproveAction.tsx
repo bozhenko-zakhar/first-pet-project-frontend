@@ -2,7 +2,11 @@ import Image from "next/image";
 
 import css from "./ModalApproveAction.module.css";
 
-const ModalApproveAction = () => {
+type Props = {
+	closeModal: () => void;
+}
+
+const ModalApproveAction = ({ closeModal }: Props) => {
 	return (
 		<div className={css.container}>
 			<div className={css.image_container}>
@@ -19,7 +23,7 @@ const ModalApproveAction = () => {
 
 			<div className={css.buttons_container}>
 				<button>Yes</button>
-				<button>Cancel</button>
+				<button onClick={closeModal}>Cancel</button>
 			</div>
 		</div>
 	);

@@ -57,7 +57,7 @@ const ModalViewProvider = ({ children }: Props) => {
 								</svg>
 							</div>
 							{
-								modalForm === "logout" ? <ModalApproveAction /> :
+								modalForm === "logout" ? <ModalApproveAction closeModal={() => (setIsOpen(false))} /> :
 									null
 							}
 						</div>

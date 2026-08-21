@@ -37,6 +37,18 @@
 	height: 28px;
 }
 
+.favicon_logo_mobile>path:nth-of-type(1),
+.favicon_logo_mobile>path:nth-of-type(3),
+.favicon_logo_desktop_tablet>path:nth-of-type(1),
+.favicon_logo_desktop_tablet>path:nth-of-type(3) {
+	fill: #262626;
+}
+
+.favicon_logo_mobile>path:nth-of-type(2),
+.favicon_logo_desktop_tablet>path:nth-of-type(2) {
+	fill: #f6b83d;
+}
+
 .list {
 	display: none;
 	gap: 10px;
@@ -54,6 +66,29 @@
 .burder_btn_container.hidden {
 	opacity: 0;
 }
+
+
+
+.header.home {
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	padding: 18px 20px;
+
+	background: #f6b83d;
+}
+
+.header.home .favicon_logo_mobile>path:nth-of-type(1),
+.header.home .favicon_logo_mobile>path:nth-of-type(3),
+.header.home .favicon_logo_desktop_tablet>path:nth-of-type(1),
+.header.home .favicon_logo_desktop_tablet>path:nth-of-type(3) {
+	fill: #fff;
+}
+
+.header.home .favicon_logo_mobile>path:nth-of-type(2),
+.header.home .favicon_logo_desktop_tablet>path:nth-of-type(2) {
+	fill: #fff;
+}
+
 
 @media (min-width: 768px) {
 	.header {
