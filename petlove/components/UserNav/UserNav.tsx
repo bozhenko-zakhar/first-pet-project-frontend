@@ -3,13 +3,17 @@ import UserBar from "../UserBar/UserBar";
 
 import css from "./UserNav.module.css"
 
-const UserNav = () => {
+type Props = {
+	isAlternative?: boolean;
+}
+
+const UserNav = ({ isAlternative }: Props) => {
 
 
 	return (
 		<div className={css.container}>
-			<LogOutButton />
-			<UserBar />
+			<LogOutButton isAlternative={isAlternative} />
+			<UserBar isAlternative={isAlternative} />
 		</div>
 	);
 };

@@ -1,8 +1,14 @@
 
 
+import clsx from "clsx"; 
 import css from "./UserBar.module.css"
 
-const UserBar = () => {
+
+type Props = {
+	isAlternative?: boolean;
+}
+
+const UserBar = ({ isAlternative }: Props) => {
 
 
 	return (
@@ -13,7 +19,7 @@ const UserBar = () => {
 				</svg>
 			</div>
 
-			<p className={css.text}>Anna</p>
+			<p className={clsx(css.text, isAlternative && css.alternative)}>Anna</p>
 		</div>
 	);
 };

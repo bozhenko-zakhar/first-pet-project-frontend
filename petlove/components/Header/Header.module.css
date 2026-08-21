@@ -1,11 +1,12 @@
 .header {
+	padding-block: 28px 20px;
+}
+
+.header_container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 8px;
-
-	padding-block: 28px 20px;
-	height: 80px;
 }
 
 .header_navigation {
@@ -67,9 +68,12 @@
 	opacity: 0;
 }
 
+/* Applied styles in case of /home route */
+.header.home_page {
+	padding-block: 10px 0;
+}
 
-
-.header.home {
+.header_container.home_page {
 	border-top-left-radius: 30px;
 	border-top-right-radius: 30px;
 	padding: 18px 20px;
@@ -77,21 +81,21 @@
 	background: #f6b83d;
 }
 
-.header.home .favicon_logo_mobile>path:nth-of-type(1),
-.header.home .favicon_logo_mobile>path:nth-of-type(3),
-.header.home .favicon_logo_desktop_tablet>path:nth-of-type(1),
-.header.home .favicon_logo_desktop_tablet>path:nth-of-type(3) {
+.header_container.home_page .favicon_logo_mobile>path:nth-of-type(1),
+.header_container.home_page .favicon_logo_mobile>path:nth-of-type(3),
+.header_container.home_page .favicon_logo_desktop_tablet>path:nth-of-type(1),
+.header_container.home_page .favicon_logo_desktop_tablet>path:nth-of-type(3) {
 	fill: #fff;
 }
 
-.header.home .favicon_logo_mobile>path:nth-of-type(2),
-.header.home .favicon_logo_desktop_tablet>path:nth-of-type(2) {
+.header_container.home_page .favicon_logo_mobile>path:nth-of-type(2),
+.header_container.home_page .favicon_logo_desktop_tablet>path:nth-of-type(2) {
 	fill: #fff;
 }
 
 
 @media (min-width: 768px) {
-	.header {
+	.header_container {
 		gap: 16px;
 	}
 
@@ -104,7 +108,6 @@
 	}
 
 	.header {
-		height: 114px;
 		padding-block: 32px;
 	}
 

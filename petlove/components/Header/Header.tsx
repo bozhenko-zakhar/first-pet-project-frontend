@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 
 import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
@@ -21,26 +20,28 @@ const Header = () => {
 	const [isBurgerOpened, setBurgerOpened] = useState(false);
 
 	return (
-		<header className={clsx(css.header, css.home)}>
-			<nav className={css.header_navigation}>
-				<Link className={css.favicon_link} href="/" aria-label="Home">
-					<LogoMobile className={css.favicon_logo_mobile} />
-					<LogoTablet className={css.favicon_logo_desktop_tablet} />
-				</Link>
+		<header className={clsx(css.header, css.home_page)}>
+			<div className={clsx(css.header_container, css.home_page)}>
+				<nav className={css.header_navigation}>
+					<Link className={css.favicon_link} href="/" aria-label="Home">
+						<LogoMobile className={css.favicon_logo_mobile} />
+						<LogoTablet className={css.favicon_logo_desktop_tablet} />
+					</Link>
 
-				<div>
-					<Nav />
+					<div>
+						<Nav isAlternative />
 
-					<AuthNav />
-					{/* <UserNav /> */}
+						{/* <AuthNav isAlternative /> */}
+						<UserNav isAlternative />
+					</div>
+				</nav>
+
+				<div className={clsx(css.burder_btn_container, isBurgerOpened && css.hidden)}>
+					<BurgerButton isAlternative setOpen={() => setBurgerOpened(!isBurgerOpened)} />
 				</div>
-			</nav>
-
-			<div className={clsx(css.burder_btn_container, isBurgerOpened && css.hidden)}>
-				<BurgerButton setOpen={() => setBurgerOpened(!isBurgerOpened)} />
 			</div>
 
-			<BurgerMenu isOpened={isBurgerOpened} setOpen={() => setBurgerOpened(!isBurgerOpened)} />
+			<BurgerMenu isAlternative isOpened={isBurgerOpened} setOpen={() => setBurgerOpened(!isBurgerOpened)} />
 		</header>
 	);
 };

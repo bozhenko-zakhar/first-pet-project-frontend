@@ -11,13 +11,17 @@
 .burger_btn span {
 	height: 3px;
 	width: 24px;
-	background: black;
+	background: #262626;
 	border-radius: 25px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	transition: transform 0.3s, top 0.3s, opacity 0.3s;
+}
+
+.burger_btn.alternative span {
+	background: #fff;
 }
 
 .burger_btn span:nth-child(1) {

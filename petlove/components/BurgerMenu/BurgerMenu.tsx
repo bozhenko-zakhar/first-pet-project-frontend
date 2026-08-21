@@ -11,25 +11,26 @@ import css from "./BurgerMenu.module.css"
 type Props = {
 	isOpened: boolean;
 	setOpen: () => void;
+	isAlternative?: boolean;
 }
 
-const BurgerMenu = ({ isOpened, setOpen }: Props) => {
+const BurgerMenu = ({ isOpened, setOpen, isAlternative }: Props) => {
 
 	return (
-		<div className={clsx(css.menu_overlay, isOpened && css.is_open)}>
-			<div className={css.menu_container}>
+		<div className={clsx(css.overlay, isOpened && css.is_open, isAlternative && css.alternative)}>
+			<div className={css.container}>
 				<div className={css.burder_btn_container}>
-					<BurgerButton isMenu setOpen={setOpen} />
+					<BurgerButton isAlternative={isAlternative} isMenu setOpen={setOpen} />
 				</div>
 
-				<nav className={css.menu_nav}>
-					<ul className={css.menu_list}>
-						<Nav isMenu />
+				<nav className={css.nav}>
+					<ul className={css.list}>
+						<Nav isAlternative={isAlternative} isMenu />
 					</ul>
 
-					<div className={css.menu_authentication}>
-						<Link className={css.menu_login} href="/login">Log in</Link>
-						<Link className={css.menu_registr} href="/register">Registration</Link>
+					<div className={clsx(css.authentication, isAlternative && css.alternative)}>
+						<Link className={css.login} href="/login">Log in</Link>
+						<Link className={css.registr} href="/register">Registration</Link>
 					</div>
 				</nav>
 

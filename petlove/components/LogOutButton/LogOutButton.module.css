@@ -19,6 +19,11 @@
 	color: #fff;
 }
 
+.button.alternative {
+	background: #fff4df;
+	color: #f6b83d;
+}
+
 @media (min-width: 768px) {
 	.button {
 		display: flex;

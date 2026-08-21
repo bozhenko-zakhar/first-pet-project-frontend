@@ -4,7 +4,7 @@
 }
 
 .login,
-.registr {
+.register {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -30,6 +30,10 @@
 	color: #fff;
 }
 
+.authentication.alternative>.login {
+	border: 1px solid #fff;
+}
+
 
 @media (min-width: 768px) {
 	.authentication {
@@ -38,9 +42,11 @@
 
 	.login {
 		width: 119px;
+		height: 50px;
 	}
 
-	.registr {
+	.register {
 		width: 149px;
+		height: 50px;
 	}
 }

@@ -31,6 +31,11 @@
 	color: #262626;
 }
 
+.list.alternative .link {
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	color: #fff;
+}
+
 @media (min-width: 768px) {
 	.link {
 		font-size: 16px;
