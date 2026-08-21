@@ -76,7 +76,7 @@
 .header_container.home_page {
 	border-top-left-radius: 30px;
 	border-top-right-radius: 30px;
-	padding: 18px 20px;
+	padding: 18px 20px 0 20px;
 
 	background: #f6b83d;
 }
@@ -97,6 +97,10 @@
 @media (min-width: 768px) {
 	.header_container {
 		gap: 16px;
+	}
+
+	.header_container.home_page {
+		padding: 16px 20px 0 20px;
 	}
 
 	.favicon_logo_mobile {

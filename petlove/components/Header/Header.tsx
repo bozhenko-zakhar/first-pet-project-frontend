@@ -18,10 +18,11 @@ import css from "./Header.module.css"
 
 const Header = () => {
 	const [isBurgerOpened, setBurgerOpened] = useState(false);
+	const [isThemed, setTheme] = useState(true);
 
 	return (
-		<header className={clsx(css.header, css.home_page)}>
-			<div className={clsx(css.header_container, css.home_page)}>
+		<header className={clsx(css.header, isThemed && css.home_page)}>
+			<div className={clsx(css.header_container, isThemed && css.home_page)}>
 				<nav className={css.header_navigation}>
 					<Link className={css.favicon_link} href="/" aria-label="Home">
 						<LogoMobile className={css.favicon_logo_mobile} />
@@ -29,19 +30,19 @@ const Header = () => {
 					</Link>
 
 					<div>
-						<Nav isAlternative />
+						<Nav isAlternative={isThemed} />
 
-						{/* <AuthNav isAlternative /> */}
-						<UserNav isAlternative />
+						{/* <AuthNav isAlternative={isThemed} /> */}
+						<UserNav isAlternative={isThemed} />
 					</div>
 				</nav>
 
 				<div className={clsx(css.burder_btn_container, isBurgerOpened && css.hidden)}>
-					<BurgerButton isAlternative setOpen={() => setBurgerOpened(!isBurgerOpened)} />
+					<BurgerButton isAlternative={isThemed} setOpen={() => setBurgerOpened(!isBurgerOpened)} />
 				</div>
 			</div>
 
-			<BurgerMenu isAlternative isOpened={isBurgerOpened} setOpen={() => setBurgerOpened(!isBurgerOpened)} />
+			<BurgerMenu isAlternative={isThemed} isOpened={isBurgerOpened} setOpen={() => setBurgerOpened(!isBurgerOpened)} />
 		</header>
 	);
 };
