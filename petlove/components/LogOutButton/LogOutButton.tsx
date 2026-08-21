@@ -1,6 +1,6 @@
 import { use } from "react";
 
-import { ModalContext } from "@/components/Modal/ModalViewProvider";
+import { ModalContext } from "@/components/ModalViewProvider/ModalViewProvider";
 
 import css from "./LogOutButton.module.css"
 

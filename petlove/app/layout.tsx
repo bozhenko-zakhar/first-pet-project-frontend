@@ -4,7 +4,7 @@ import Header from "@/components/Header/Header";
 
 import "./globals.css";
 import css from "./layout.module.css"
-import ModalViewProvider from "@/components/Modal/ModalViewProvider";
+import ModalViewProvider from "@/components/ModalViewProvider/ModalViewProvider";
 
 const manrope = Manrope({
 	subsets: ["latin", "cyrillic"],

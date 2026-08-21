@@ -34,7 +34,8 @@
 	display: flex;
 	gap: 8px;
 
-	width: min-content;
+	min-width: 269px;
+	max-width: 279px;
 	margin-inline: auto;
 }
 
@@ -74,7 +75,12 @@
 		line-height: 1.16667;
 	}
 
-	.buttons_container>button {
+	.buttons_container {
+		width: 288px;
+	}
+
+	.buttons_container>button,
+	.buttons_container>button:last-child {
 		width: 140px;
 		font-size: 16px;
 		line-height: 1.25;

@@ -24,7 +24,7 @@ const BurgerMenu = ({ isOpened, setOpen }: Props) => {
 
 				<nav className={css.menu_nav}>
 					<ul className={css.menu_list}>
-						<Nav />
+						<Nav isMenu />
 					</ul>
 
 					<div className={css.menu_authentication}>

@@ -1,16 +1,21 @@
 import Link from "next/link";
 
+import clsx from "clsx";
 import css from "./Nav.module.css"
 
-const Nav = () => {
+type Props = {
+	isMenu?: boolean;
+}
+
+const Nav = ({ isMenu }: Props) => {
 
 
 	return (
-		<>
+		<ul className={clsx(css.list, isMenu && css.menu)}>
 			<li><Link className={css.link} href="/news">News</Link></li>
 			<li><Link className={css.link} href="/notices">Find pet</Link></li>
 			<li><Link className={css.link} href="/friends">Our friends</Link></li>
-		</>
+		</ul>
 	);
 };
 

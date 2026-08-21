@@ -29,9 +29,7 @@ const Header = () => {
 				</Link>
 
 				<div>
-					<ul className={css.list}>
-						<Nav />
-					</ul>
+					<Nav />
 
 					{/* <AuthNav /> */}
 					<UserNav />

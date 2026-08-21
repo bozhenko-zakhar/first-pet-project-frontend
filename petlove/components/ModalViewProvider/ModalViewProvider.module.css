@@ -16,11 +16,14 @@
 
 .modal_container {
 	position: relative;
-	background-color: #ffffff;
+
 	border-radius: 8px;
 	min-width: 325px;
 	max-width: 375px;
 	height: fit-content;
+	margin-block: auto;
+
+	background-color: #ffffff;
 }
 
 .icon_container {
@@ -42,7 +45,7 @@
 	}
 
 	.modal_container {
-		min-width: 566px;
+		min-width: min-content;
 	}
 }
 
