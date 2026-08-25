@@ -7,7 +7,8 @@
 	padding: 245px 33px;
 
 	background: #f6b83d;
-	border-radius: 60px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 60px;
 }
 
 .image_container {
@@ -17,7 +18,7 @@
 	gap: 8px;
 }
 
-.image_container > p {
+.image_container>p {
 	font-family: var(--manrope-font);
 	font-weight: 800;
 	font-size: 120px;
@@ -31,7 +32,7 @@
 	flex-shrink: 1;
 }
 
-.image_container + p {
+.image_container+p {
 	font-family: var(--manrope-font);
 	font-weight: 700;
 	line-height: 1.25;
@@ -69,7 +70,7 @@
 		margin-bottom: 40px;
 	}
 
-	.image_container > p {
+	.image_container>p {
 		font-size: 300px;
 	}
 
@@ -78,7 +79,7 @@
 		height: 280px;
 	}
 
-	.image_container + p {
+	.image_container+p {
 		font-size: 24px;
 		line-height: 1.16667;
 	}
