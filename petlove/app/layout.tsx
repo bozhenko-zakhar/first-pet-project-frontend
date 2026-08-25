@@ -1,15 +1,11 @@
 import { Manrope } from "next/font/google";
 
-import Header from "@/components/Header/Header";
-
-import { ProgressProvider } from "@/components/progress/ProgressProvider/ProgressProvider";
-
 import ModalViewProvider from "@/components/ModalViewProvider/ModalViewProvider";
-import ProgressController from "@/components/progress/ProgressController/ProgressController";
+import Header from "@/components/Header/Header";
+import LoaderController from "@/components/progress/LoaderController/LoaderController";
 
 import "./globals.css";
 import css from "./layout.module.css"
-import PageProgress from "@/components/progress/PageProgress/PageProgress";
 
 const manrope = Manrope({
 	subsets: ["latin", "cyrillic"],
@@ -27,16 +23,11 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${manrope.variable}`}>
 				<div className={css.container}>
-					<ProgressProvider>
-						<ProgressController />
-
-						<PageProgress />
-
-						<ModalViewProvider>
-							<Header />
-							{children}
-						</ModalViewProvider>
-					</ProgressProvider>
+					<ModalViewProvider>
+						<LoaderController />
+						<Header />
+						{children}
+					</ModalViewProvider>
 				</div>
 			</body>
 		</html>
