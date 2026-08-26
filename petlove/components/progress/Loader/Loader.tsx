@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import css from "./Loader.module.css";
+
 export default function Loader() {
 	const [progress, setProgress] = useState(0);
 
@@ -27,18 +29,21 @@ export default function Loader() {
 	}, []);
 
 	return (
-		<div
-			style={{
-				position: "fixed",
-				top: 0,
-				left: 0,
-				height: "4px",
-				width: `${progress}%`,
-				background: "black",
-				zIndex: 99999,
-				pointerEvents: "none",
-				transition: "width 100ms linear",
-			}}
-		/>
+		<div className={css.container}>
+			{progress === 0 ?
+				<>
+					<svg className={css.logo_mobile}>
+						<use href="/logo-loading-mobile.svg"></use>
+					</svg>
+					<svg className={css.logo}>
+						<use href="/logo-loading.svg"></use>
+					</svg>
+				</> :
+				<div className={css.percentage_container}>
+					<div className={css.circle}/>
+					<p className={css.percentage}>{Math.round(progress)}%</p>
+				</div>
+			}
+		</div>
 	);
 }

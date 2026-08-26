@@ -1,0 +1,101 @@
+.container {
+	position: fixed;
+	inset: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-image: url("/loading-mobile.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.logo_mobile {
+	width: 190px;
+	height: 50px;
+}
+
+.logo {
+	display: none;
+	width: 374px;
+	height: 100px;
+}
+
+.percentage_container {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 270px;
+	height: 270px;
+}
+
+.circle {
+	position: absolute;
+
+	width: inherit;
+	height: inherit;
+
+	border: 2px solid white;
+	border-radius: 50%;
+
+	-webkit-mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 75%);
+	mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 75%);
+
+	animation-name: progress;
+	animation-timing-function: linear;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+.percentage {
+	font-family: var(--manrope-font);
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 1;
+	letter-spacing: -0.04em;
+	color: #fff;
+}
+
+@keyframes progress {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		background-image: url("/loading-tablet.jpg");
+	}
+
+	.logo_mobile {
+		display: none;
+	}
+
+	.logo {
+		display: block;
+	}
+
+	.percentage_container {
+		width: 396px;
+		height: 396px;
+	}
+
+	.percentage {
+		font-size: 80px;
+	}
+}
+
+@media (min-width: 1280px) {
+	.container {
+		background-image: url("/loading-desktop.jpg");
+	}
+}
