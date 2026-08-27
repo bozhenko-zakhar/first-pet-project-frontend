@@ -1,0 +1,36 @@
+.image_container {
+	border-radius: 30px;
+	overflow: hidden;
+}
+
+.image {
+	object-fit: cover;
+}
+
+.tablet_image {
+	display: none;
+}
+
+.desktop_image {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.mobile_image {
+		display: none;
+	}
+
+	.tablet_image {
+		display: block;
+	}
+}
+
+@media (min-width: 1280px) {
+	.tablet_image {
+		display: none;
+	}
+
+	.desktop_image {
+		display: block;
+	}
+}

@@ -18,7 +18,7 @@ import css from "./Header.module.css"
 
 const Header = () => {
 	const [isBurgerOpened, setBurgerOpened] = useState(false);
-	const [isThemed, setTheme] = useState(true);
+	const [isThemed, setTheme] = useState(false);
 
 	return (
 		<header className={clsx(css.header, isThemed && css.home_page)}>
@@ -32,8 +32,8 @@ const Header = () => {
 					<div>
 						<Nav isAlternative={isThemed} />
 
-						{/* <AuthNav isAlternative={isThemed} /> */}
-						<UserNav isAlternative={isThemed} />
+						<AuthNav isAlternative={isThemed} />
+						{/* <UserNav isAlternative={isThemed} /> */}
 					</div>
 				</nav>
 
