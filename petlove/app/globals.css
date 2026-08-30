@@ -8,6 +8,7 @@ body {
 	font-family: var(--font-family);
 	margin: 0px;
 	overflow: auto !important;
+	background-color: #f9f9f9;
 }
 
 img,

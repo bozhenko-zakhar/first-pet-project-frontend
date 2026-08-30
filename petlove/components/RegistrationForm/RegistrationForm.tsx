@@ -12,51 +12,53 @@ const RegistrationForm = () => {
 
 	return (
 		<form className={css.form}>
-			<div className={css.input_container}>
-				<input className={css.input} />
-				<p className={clsx(css.error, css.shown)}>Error</p>
-			</div>
-
-			<div className={css.input_container}>
-				<input className={css.input} />
-				<p className={clsx(css.error)}></p>
-			</div>
-
-			<div className={css.input_container}>
-				<input className={css.input} />
-				<p className={clsx(css.error)}></p>
-
-				<div className={css.svg_container}
-					onClick={() => setPasswordShown(!isPasswordShown)}
-				>
-					{
-						isPasswordShown
-							? <svg className={css.svg}>
-								<use href="/eye-off.svg"></use>
-							</svg>
-							: <svg className={css.svg}>
-								<use href="/eye.svg"></use>
-							</svg>
-					}
+			<div>
+				<div className={css.input_container}>
+					<input className={css.input} />
+					<p className={clsx(css.error, css.shown)}>Error</p>
 				</div>
-			</div>
 
-			<div className={css.input_container}>
-				<input className={css.input} />
-				<p className={clsx(css.error)}></p>
+				<div className={css.input_container}>
+					<input className={css.input} />
+					<p className={clsx(css.error)}></p>
+				</div>
 
-				<div className={css.svg_container}
-					onClick={() => setConfirmPasswordShown(!isConfirmPasswordShown)}
-				>
-					{
-						isConfirmPasswordShown
-							? <svg className={css.svg}>
-								<use href="/eye-off.svg"></use>
-							</svg>
-							: <svg className={css.svg}>
-								<use href="/eye.svg"></use>
-							</svg>
-					}
+				<div className={css.input_container}>
+					<input className={css.input} />
+					<p className={clsx(css.error)}></p>
+
+					<div className={css.svg_container}
+						onClick={() => setPasswordShown(!isPasswordShown)}
+					>
+						{
+							isPasswordShown
+								? <svg className={css.svg}>
+									<use href="/eye-off.svg"></use>
+								</svg>
+								: <svg className={css.svg}>
+									<use href="/eye.svg"></use>
+								</svg>
+						}
+					</div>
+				</div>
+
+				<div className={css.input_container}>
+					<input className={css.input} />
+					<p className={clsx(css.error)}></p>
+
+					<div className={css.svg_container}
+						onClick={() => setConfirmPasswordShown(!isConfirmPasswordShown)}
+					>
+						{
+							isConfirmPasswordShown
+								? <svg className={css.svg}>
+									<use href="/eye-off.svg"></use>
+								</svg>
+								: <svg className={css.svg}>
+									<use href="/eye.svg"></use>
+								</svg>
+						}
+					</div>
 				</div>
 			</div>
 

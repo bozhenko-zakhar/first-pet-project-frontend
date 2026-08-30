@@ -1,4 +1,5 @@
 .image_container {
+	flex-shrink: 0;
 	border-radius: 30px;
 	overflow: hidden;
 }

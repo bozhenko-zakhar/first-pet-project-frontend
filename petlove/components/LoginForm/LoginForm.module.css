@@ -34,7 +34,6 @@
 	color: rgba(38, 38, 38, 0.8);
 }
 
-
 .input_container:not(:last-child) .input {
 	margin-bottom: 10px;
 }
@@ -77,10 +76,6 @@
 .svg {
 	width: 22px;
 	height: 22px;
-}
-
-.confirm_section {
-	margin-top: 12px;
 }
 
 .button {
@@ -136,7 +131,7 @@
 		font-size: 12px;
 		line-height: 1.16667;
 	}
-	
+
 	.redirection {
 		font-size: 14px;
 		text-align: center;

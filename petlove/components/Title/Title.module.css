@@ -16,8 +16,6 @@
 	line-height: 1.28571;
 	letter-spacing: -0.02em;
 	color: #262626;
-
-	margin-bottom: 24px;
 }
 
 @media (min-width: 768px) {
@@ -29,7 +27,5 @@
 	.description {
 		font-size: 18px;
 		line-height: 1.22222;
-
-		margin-bottom: 32px;
 	}
 }

@@ -9,12 +9,14 @@
 .form_container {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+
 
 	border-radius: 30px;
 	background: white;
-	padding: 27px 20px;
+	padding: 60px 20px;
 	height: 422px;
 }
 
@@ -30,7 +32,7 @@
 
 		border-radius: 60px;
 		margin-inline: auto;
-		padding: 30px 140px;
+		padding: 71px 140px;
 		width: 704px;
 		height: 560px;
 	}
@@ -44,7 +46,7 @@
 	}
 
 	.form_container {
-		padding: 77px 84px;
+		padding: 114px 84px;
 		width: 592px;
 		height: 654px;
 	}
